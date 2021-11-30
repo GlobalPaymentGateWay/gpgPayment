@@ -31,12 +31,15 @@ class MainActivity : AppCompatActivity() {
     private val paymentResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         when (it.resultCode) {
             RESULT_OK -> {
+                //Here the payment is finished successfully.
                 Toast.makeText(this, it.data?.getStringExtra(PAYMENT_RESULT) ?: "Payment Successful!", Toast.LENGTH_LONG).show()
             }
             RESULT_CANCELED -> {
+                //The user cancels the payment
                 Toast.makeText(this, it.data?.getStringExtra(PAYMENT_RESULT) ?: "Payment Failed", Toast.LENGTH_LONG).show()
             }
             else -> {
+                //An unknown error has occurred
                 Toast.makeText(this, "Unknown Error", Toast.LENGTH_LONG).show()
             }
         }
