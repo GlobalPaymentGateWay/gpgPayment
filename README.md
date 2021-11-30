@@ -75,7 +75,7 @@ data class PaymentParams(
 then in an on click listener(or anything else you like) pass the class paymentParams
 
 ```kotlin
-            val intent = Intent(this, PaymentActivity::class.java)
-            intent.putExtra("paymentParams", paymentParams)
-            paymentResult.launch(intent)
+ val intent = Intent(this, PaymentActivity::class.java)
+ intent.putExtra("paymentParams", paymentParams)
+ paymentResult.launch(intent)
 ```
