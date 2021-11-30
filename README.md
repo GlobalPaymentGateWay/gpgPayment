@@ -83,7 +83,7 @@ enum class Currency {
 }
 ```
 
-Then in an on click listener(or anything else you like) pass the class paymentParams:
+Then in an 'setOnClickListener'(or anything else you like) pass the class paymentParams:
 
 ```kotlin
  val intent = Intent(this, PaymentActivity::class.java)
