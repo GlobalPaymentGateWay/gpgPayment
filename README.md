@@ -26,7 +26,9 @@ From an Activity -
 Create a variable
 
 ```kotlin
-private val paymentResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+class MainActivity : AppCompatActivity() {
+
+    private val paymentResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         when (it.resultCode) {
             RESULT_OK -> {
                 Toast.makeText(this, it.data?.getStringExtra(PAYMENT_RESULT) ?: "Payment Successful!", Toast.LENGTH_LONG).show()
@@ -39,9 +41,12 @@ private val paymentResult = registerForActivityResult(ActivityResultContracts.St
             }
         }
     }
+    //Rest of your code
+}
 ```
 
 Create an instance of the class PaymentParams and fill it with your data
+
 ```kotlin
 data class PaymentParams(
     val numSite: String,
