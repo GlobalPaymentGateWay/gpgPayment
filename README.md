@@ -22,7 +22,7 @@ dependencies {
 ```
 # Usage
 
-From an Activity -
+From an Activity/Fragment -
 Create a variable
 
 ```kotlin
