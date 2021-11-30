@@ -26,7 +26,7 @@ From an Activity -
 Create a variable
 
 ```kotlin
-    private val paymentResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+private val paymentResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         when (it.resultCode) {
             RESULT_OK -> {
                 Toast.makeText(this, it.data?.getStringExtra(PAYMENT_RESULT) ?: "Payment Successful!", Toast.LENGTH_LONG).show()
@@ -70,9 +70,15 @@ data class PaymentParams(
     val merchantUserName: String,
     val merchantPassword: String
 )
+
+enum class Currency {
+    TND,
+    EUR,
+    USD
+}
 ```
 
-then in an on click listener(or anything else you like) pass the class paymentParams
+Then in an on click listener(or anything else you like) pass the class paymentParams:
 
 ```kotlin
  val intent = Intent(this, PaymentActivity::class.java)
