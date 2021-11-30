@@ -84,6 +84,11 @@ enum class Currency {
     EUR,
     USD
 }
+
+enum class Language {
+    Fr,
+    En
+}
 ```
 
 Then in an ```setOnClickListener``` (or anything else you like) pass the class paymentParams:
