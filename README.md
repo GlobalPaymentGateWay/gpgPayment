@@ -17,7 +17,7 @@ Then add this dependency to your app's build.gradle file
 
 ```groovy
 dependencies {
-    implementation 'com.github.tapadoo:alerter:$current-version'
+    implementation 'TODO'
 }
 ```
 # Usage
